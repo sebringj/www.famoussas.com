@@ -1,0 +1,41 @@
+﻿.form {
+    padding:20px;
+    min-height:300px;
+    font-family:Arial,Verdana;
+    border-bottom:5px solid #000;
+}
+    .form h1 {
+        margin:0;
+        font-size:2.5em;
+        color:#777;
+    }
+    .form h2 {
+        color:#777;
+        font-size:2em;
+    }
+    .form label {
+        display:block;
+    }
+        .form label span {
+            display:inline-block;
+            width:200px;
+            text-align:right;
+            margin-right:3px;
+            font-size:1.4em;
+        }
+        .form label input {
+            width:200px;
+            padding:3px;
+        }
+    .form .button-group {
+        text-align:right;
+        width:206px;
+    }
+    .form button {
+        background-color:#c1182b;
+        padding:5px 10px 5px 10px;
+        color:#fff;
+        font-family:Arial, Verdana;
+        border:none;
+        font-weight:700;
+    }

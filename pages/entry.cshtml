@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/templates/famoussas/_Form.cshtml";
+}
+
+@section head
+{
+    <link rel="stylesheet" href="/css/famoussas/entry.css" />
+}
+
+<h1>Sign In or Sign Up</h1>
+
+<form class="sign-in">
+    <h2>Sign In</h2>
+    <p>If you've registered, sign in here.</p>
+    <label>
+        <input type="email" data-name="email" placeholder="Email Address *" required />
+    </label>
+    <label>
+        <input type="password" data-name="password" placeholder="Password *" required />
+    </label>
+    <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+    <div class="button-group">
+        <button>Submit</button>
+    </div>
+</form>
+
+<form class="sign-up">
+    <h2>Sign Up</h2>
+    <p>Makes checkout faster and easy to track orders.</p>
+    <label>
+        <input type="text"  data-name="last-name" placeholder="First Name *" required />
+    </label>
+    <label>
+        <input type="text"  data-name="ast-name" placeholder="Last Name *" required />
+    </label>
+    <label>
+        <input type="email"  data-name="email" placeholder="Email Address *" required />
+    </label>
+    <label>
+        <input type="password" data-name="password" placeholder="Password *" required />
+    </label>
+    <label>
+        <input type="password"  data-name="confirm-password" placeholder="Confirm Password *" required />
+    </label>
+    <div class="button-group">
+        <button>Submit</button>
+    </div>
+</form>
+
+@section foot {
+    <script src="/js/entry.js"></script>    
+}

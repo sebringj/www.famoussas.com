@@ -51,21 +51,21 @@
                         <div class="signed-in">
                             <a>Welcome, <span class="name"></span></a>
                             <span class="divider">|</span>
-                            <a href="#">My Account</a>
+                            <a href="/account">My Account</a>
                             <span class="divider">|</span>
                             <a href="#">Logout</a>
                             <span class="divider">|</span>
                         </div>
                         <div class="signed-out">
-                            <a href="#">Sign Up</a>
+                            <a href="/entry">Sign Up</a>
                             <span class="divider">|</span>
-                            <a href="#">Sign In</a>
+                            <a href="/entry">Sign In</a>
                             <span class="divider">|</span>
                         </div>
                         <div class="both">
-                            <a href="#">My Cart <span class="cart-indicator"></span></a>
+                            <a href="/cart">My Cart (<span class="cart-indicator">0</span>)</a>
                             <span class="divider">|</span>
-                            <a href="#">Checkout</a>
+                            <a href="/checkout">Checkout</a>
                         </div>
                     </div>
                 </div>
@@ -116,6 +116,7 @@
             </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+        <script src="//api.hubsoft.ws/@@js"></script>
         <script src="/js/main.js"></script>
         @RenderSection("foot", required: false)
         <script type="text/javascript">

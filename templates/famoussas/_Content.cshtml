@@ -1,9 +1,15 @@
-﻿@section head
+﻿@{
+    Layout = "~/templates/famoussas/_Main.cshtml";    
+}
+@section head
 {
+    <link rel="stylesheet" href="/css/famoussas/content.css" />
     @RenderSection("head", required: false)
 }
 
+<div class="content">
 @RenderBody()
+</div>
 
 @section foot
 {

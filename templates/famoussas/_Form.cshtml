@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/templates/famoussas/_Shop.cshtml";    
+}
+@section head
+{@*
+    *@<link rel="stylesheet" href="/css/famoussas/form.css" />@*
+    *@@RenderSection("head", required: false)@*
+*@}
+<div class="form">
+    @RenderBody()
+</div>
+
+@section foot
+{
+    @RenderSection("foot", required: false)
+}

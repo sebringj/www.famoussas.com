@@ -1,0 +1,13 @@
+﻿.sign-up {
+    float:left;
+    width:40%;
+}
+.sign-in {
+    float:left;
+    width:40%;
+    margin-left:100px;
+}
+.forgot-password {
+    color:#000;
+    font-weight:bold;
+}

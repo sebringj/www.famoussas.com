@@ -104,7 +104,8 @@
         #top .sub-nav .user-nav div {
             display:inline-block;
         }
-            #top .sub-nav .user-nav div.signed-in {
+            #top .sub-nav .user-nav div.signed-in,
+            #top .sub-nav .user-nav div.signed-out {
                 display:none;
             }
         #top .sub-nav .user-nav .divider {
@@ -114,13 +115,13 @@
         }
 #middle {
     margin-top:79px;
-    min-height:800px;
+    min-height:300px;
 }
     #middle .banner {
         width:1080px;
-        height:115px;
-        background:#f00;
+        height:120px;
         position:relative;
+        background-color:#fff;
     }
         #middle .banner .logo {
             background-image:url(//s3.amazonaws.com/clients.emeraldcode.com/famoussas/logomain.png);
@@ -147,6 +148,7 @@
         bottom:0;
         left:0;
         width:100%;
+        z-index:10;
     }
 #bottom {
     background:#fff;
@@ -176,4 +178,13 @@
         #bottom .column4 input {
             width:170px;
             padding:3px;
+        }
+        #bottom .column4 button {
+            background-color:#c1182b;
+            padding:5px 10px 5px 10px;
+            color:#fff;
+            font-family:Arial, Verdana;
+            border:none;
+            font-weight:700;
+            text-transform:uppercase;
         }
