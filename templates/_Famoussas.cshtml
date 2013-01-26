@@ -1,0 +1,50 @@
+﻿@{
+    Page.Title = "Famous Stars and Straps";
+    Page.MetaDescription = "Doing our own thing since 1999";
+
+    var pageID = Web.KitGUI.PageID;
+    var pageVars = KitGUI.Consumer.GetPageSEOInfo(pageID);
+    
+    if (!string.IsNullOrEmpty(pageVars.PageTitle)) {
+        Page.Title = pageVars.PageTitle;
+    }
+    if (!string.IsNullOrEmpty(pageVars.MetaDescription)) {
+        Page.MetaDescription = pageVars.MetaDescription;
+    }
+}<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        <meta name="description" content="@Page.MetaDescription" />        
+        <meta name="kitgui-page-id" content="@pageID" />
+        <link rel="stylesheet" href="/css/famoussas/main.css" />
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        <div id="top">
+            <div class="main-nav">
+                <div class="site-width">
+
+                </div>
+            </div>
+            <div class="sub-nav">
+                <div class="site-width">
+
+                </div>
+            </div>
+        </div>
+        <div id="middle" class="site-width">
+            <div class="banner">
+                <div class="logo" title="Famous Stars and Straps"></div>
+                <div class="rotator">@Html.Raw(KitGUI.Consumer.GetContent("global-middle-banner","IMAGE-ROTATOR"))</div>
+            </div>
+            @RenderBody()
+        </div>
+        <div id="bottom">
+            <div class="site-width">
+
+            </div>
+        </div>
+        @RenderSection("foot", required: false)
+    </body>
+</html>

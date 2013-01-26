@@ -1,0 +1,49 @@
+﻿body {
+    margin:0;
+    background-color:#000;
+    text-align:center;
+}
+.site-width {
+    width:1080px;
+    text-align:left;
+    margin:0 auto;
+}
+#top {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:#000;
+    z-index:100;
+}
+#top .main-nav {
+    height:51px;
+}
+#top .sub-nav {
+    background:#D1D2D4;
+    color:#333;
+    height:28px;
+}
+#middle {
+    margin-top:79px;
+    min-height:800px;
+    background:#666;
+}
+    #middle .banner {
+        width:1080px;
+        height:115px;
+        background:#f00;
+        position:relative;
+    }
+        #middle .banner .logo {
+            background-image:url(//www.famoussas.com/fsasv2/elements/logomain.png);
+            width:437px;
+            height:112px;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+#bottom {
+    background:#fff;
+    height:210px;
+}

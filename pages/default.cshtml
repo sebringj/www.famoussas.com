@@ -1,0 +1,26 @@
+﻿@using System.Web.Script.Serialization;
+@using System.Web.Caching;
+@{
+    Layout = "~/templates/_Famoussas.cshtml";
+
+    var cacheKey = "featured-products";
+    HelperResult featuredProducts = Cache[cacheKey] as HelperResult;
+    if (featuredProducts == null)
+    {
+        featuredProducts = getFeaturedProducts();
+        Web.Cache.Set(cacheKey, featuredProducts, 5);
+    }
+}
+
+@helper getFeaturedProducts() {
+    var json = Web.DynamicJson.Get("http://klim.hubsoft.ws/api/v1/products?tags=jackets,womens");
+    var products = json.products; 
+    foreach(var product in products)
+    {
+        <div>@product.productName</div>
+    }
+}
+
+<div>
+    
+</div>
