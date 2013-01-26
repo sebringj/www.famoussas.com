@@ -12,7 +12,7 @@ namespace Web
         {
             public class KitGUI
             {
-                public static string AccountKey {get {return config.AppSettings["WebsiteURL"];}}
+                public static string AccountKey {get {return config.AppSettings["KitGUI.AccountKey"];}}
             }
         }
     }

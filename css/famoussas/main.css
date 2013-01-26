@@ -2,6 +2,7 @@
     margin:0;
     background-color:#000;
     text-align:center;
+    font-size:62.5%;
 }
 .site-width {
     width:1080px;
@@ -15,19 +16,105 @@
     width:100%;
     background-color:#000;
     z-index:100;
+    height:79px;
 }
+
+/* main navigation */
 #top .main-nav {
-    height:51px;
+    margin-top:16px;
+    height:35px;
+    background-image:url(//s3.amazonaws.com/clients.emeraldcode.com/famoussas/shop-nav.jpg);
+    background-repeat:no-repeat;
+    background-position:top right;
+    position:relative;
 }
+#top .main-nav a {
+    position:absolute;
+    background-image:url(//s3.amazonaws.com/clients.emeraldcode.com/famoussas/shop-nav.jpg);
+    display:block;
+    top:0;
+    height:35px;
+    width:0;
+    border:none;
+    text-decoration:none;
+    cursor:pointer;
+}
+#top .main-nav a span { display:none;}
+#top .main-nav a:hover { z-index:5; }
+#top .main-nav a.home { background-position:-214px 0; width:89px; left:317px; }
+#top .main-nav a.home:hover,#top .main-nav a.home.selected { background-position:-214px -35px;}
+#top .main-nav a.video {background-position:-300px 0;width:88px;left:403px;}
+#top .main-nav a.video:hover,#top .main-nav a.video.selected {background-position:-300px -70px;}
+#top .main-nav a.family {background-position:-384px 0;width:108px;left:487px;}
+#top .main-nav a.family:hover,#top .main-nav a.family.selected {background-position:-384px -105px;}
+#top .main-nav a.shop {background-position:-487px 0;width:90px;left:590px;}
+#top .main-nav a.shop:hover,#top .main-nav a.shop.selected {background-position:-487px -140px;}
+#top .main-nav a.dealers {background-position:-573px 0;width:178px;left:676px;}
+#top .main-nav a.dealers:hover,#top .main-nav a.dealers.selected {background-position:-573px -175px;}
+#top .main-nav a.calendar {background-position:-746px 0;width:117px;left:849px;}
+#top .main-nav a.calendar:hover,#top .main-nav a.calendar.selected {background-position:-746px -210px;}
+#top .main-nav a.locator {background-position:-860px 0;width:117px;right:0}
+#top .main-nav a.locator:hover,#top .main-nav a.locator.selected {background-position:-860px -245px;}
+
 #top .sub-nav {
     background:#D1D2D4;
     color:#333;
     height:28px;
+    width:100%;
+    text-align:left;
+    margin-left:-2px;
 }
+    #top .sub-nav .social-nav {
+        width:49%;
+        float:left;
+    }
+#top .sub-nav .social-nav a { 
+    font-family:"Arial Black", Arial, Verdana;
+    font-weight:700;
+    color:#900;
+    font-size:1.2em;
+    font-style:italic;
+    text-transform:uppercase;
+    text-decoration:none;
+    display:inline-block;
+    margin:6px 0 0 12px;
+}
+    #top .sub-nav .social-nav a:hover {
+        color:#333;
+    }
+    #top .sub-nav .user-nav {
+        width:39%;
+        float:right;
+        text-align:right;
+        padding-right:30px;
+    }
+        #top .sub-nav .user-nav a {
+            display:inline-block;
+            color:#777;
+            font-size:1.2em;
+            margin:7px 6px 0 6px;
+            font-family:Arial, Verdana;
+            font-weight:700;
+            text-decoration:none;
+        }
+            #top .sub-nav .user-nav a:hover,
+            #top .sub-nav .user-nav a.selected {
+                color:#fff;
+            }
+        #top .sub-nav .user-nav div {
+            display:inline-block;
+        }
+            #top .sub-nav .user-nav div.signed-in {
+                display:none;
+            }
+        #top .sub-nav .user-nav .divider {
+            display:inline-block;
+            color:#999;
+            font-size:1.2em;
+        }
 #middle {
     margin-top:79px;
     min-height:800px;
-    background:#666;
 }
     #middle .banner {
         width:1080px;
@@ -36,14 +123,57 @@
         position:relative;
     }
         #middle .banner .logo {
-            background-image:url(//www.famoussas.com/fsasv2/elements/logomain.png);
+            background-image:url(//s3.amazonaws.com/clients.emeraldcode.com/famoussas/logomain.png);
             width:437px;
             height:112px;
             position:absolute;
             left:0;
             top:0;
+            z-index:5;
         }
+        #middle .banner .rotator {
+            width:665px;
+            height:112px;
+            position:absolute;
+            right:0;
+            top:0;
+        }
+    #middle .banner .border-bottom {
+        border-top:4px solid #c1182b;
+        height:2px;
+        background-color:#fff;
+        border-bottom:3px solid #000;
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+    }
 #bottom {
     background:#fff;
     height:210px;
+    font-size:1.4em;
+    font-family:Arial, Verdana;
+    font-weight:600;
 }
+    #bottom a, #bottom span, #bottom .copyright {
+        color:#bbb;
+        display:block;
+        margin:2px;
+    }
+    #bottom .padding {
+        padding-left:250px;   
+    }
+    #bottom .column {
+        float:left;
+        margin:0;
+        width:180px;
+        height:100px;
+        padding-top:30px;
+    }
+    #bottom .column4 {
+        width:280px;
+    }
+        #bottom .column4 input {
+            width:170px;
+            padding:3px;
+        }

@@ -1,0 +1,126 @@
+﻿@{
+    Page.Title = "Famous Stars and Straps";
+    Page.MetaDescription = "Doing our own thing since 1999";
+
+    var pageID = Web.KitGUI.PageID;
+    var pageVars = KitGUI.Consumer.GetPageSEOInfo(pageID);
+    
+    if (!string.IsNullOrEmpty(pageVars.PageTitle)) {
+        Page.Title = pageVars.PageTitle;
+    }
+    if (!string.IsNullOrEmpty(pageVars.MetaDescription)) {
+        Page.MetaDescription = pageVars.MetaDescription;
+    }
+}<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        <meta name="description" content="@Page.MetaDescription" />        
+        <meta name="kitgui-page-id" content="@pageID" />
+        <link rel="shortcut icon" href="//s3.amazonaws.com/clients.emeraldcode.com/famoussas/favicon.ico">
+        <link rel="stylesheet" href="/css/famoussas/main.css" />
+        @RenderSection("head", required: false)
+        <!--
+        another ecommerce site by
+         _____                   _   _    _____       _                           
+        |   __|_____ ___ ___ ___| |_| |  |     |___ _| |___         ___ ___ _____ 
+        |   __|     | -_|  _| .'| | . |  |   --| . | . | -_|   _   |  _| . |     |
+        |_____|_|_|_|___|_| |__,|_|___|  |_____|___|___|___|  |_|  |___|___|_|_|_|  circa 2013
+        -->
+    </head>
+    <body>
+        <div id="top">
+            <div class="main-nav site-width">
+                <a class="home" href="http://www.famoussas.com/news"><span>home</span></a>
+                <a class="video" href="http://www.famoussas.com/news/?cat=3"><span>video</span></a>
+                <a class="family" href="http://www.famoussas.com/news/?page_id=19762"><span>fam1ly</span></a>
+                <a class="shop" href="/"><span>shop</span></a>
+                <a class="dealers" href="http://www.famoussas.com/news/?page_id=19761"><span>dealers</span></a>
+                <a class="calendar" href="http://www.famoussas.com/news/?page_id=19736"><span>calendar</span></a>
+                <a class="locator" href="http://www.famoussas.com/storev2/store/ustorelocator/location/map/"><span>locator</span></a>
+            </div>
+            <div class="sub-nav">
+                <div class="site-width">
+                    <div class="social-nav">
+                        <a href="https://www.facebook.com/famousstarsandstraps">Facebook<span>//</span></a>
+                        <a href="https://twitter.com/famoussas">Twitter<span>//</span></a>
+                        <a href="http://instagram.com/fsastagram">Instagram<span>//</span></a>
+                        <a href="http://www.famoussas.com/fsasv2/maillist.html">Mail List<span>//</span></a>
+                    </div>
+                    <div class="user-nav">
+                        <div class="signed-in">
+                            <a>Welcome, <span class="name"></span></a>
+                            <span class="divider">|</span>
+                            <a href="#">My Account</a>
+                            <span class="divider">|</span>
+                            <a href="#">Logout</a>
+                            <span class="divider">|</span>
+                        </div>
+                        <div class="signed-out">
+                            <a href="#">Sign Up</a>
+                            <span class="divider">|</span>
+                            <a href="#">Sign In</a>
+                            <span class="divider">|</span>
+                        </div>
+                        <div class="both">
+                            <a href="#">My Cart <span class="cart-indicator"></span></a>
+                            <span class="divider">|</span>
+                            <a href="#">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="middle" class="site-width">
+            <div class="banner">
+                <div class="logo" title="Famous Stars and Straps"></div>
+                <div class="rotator">@Html.Raw(KitGUI.Consumer.GetContent("global-middle-banner","IMAGE-ROTATOR"))</div>
+                <div class="border-bottom"></div>
+            </div>
+            @RenderBody()
+        </div>
+        <div id="bottom">
+            <div class="site-width">
+                <div class="padding">
+                    <div class="column">
+                        <span>Follow</span>
+                        <a href="https://twitter.com/famoussas">Twitter</a>
+                        <a href="https://www.facebook.com/famousstarsandstraps">Facebook</a>
+                        <a href="http://snapwidget.com/profile/?id=14172284">Instagram</a>
+                    </div>
+                    <div class="column">
+                        <span>Contact</span>
+                        <a href="tel:19093905670">1.909.390.5670</a>
+                        <span>M-F 9am-4pm</span>
+                        <span>E-mail Us</span>
+                    </div>
+                    <div class="column">
+                        <span>Visit</span>
+                        <span>The Fast Life</span>
+                        <span>8101 West 3rd St</span>
+                        <span>Los Angeles, CA 90023</span>
+                    </div>
+                    <div class="column column4">
+                        <span>Family Newsletter</span>
+                        <form action="http://visitor.constantcontact.com/d.jsp" method="post">
+                            <input name="m" id="m" value="1102192950332" type="hidden" />
+                            <input name="p" id="p" value="oi" type="hidden"/>
+                            <input type="email" placeholder="Your E-Mail Address" />
+                            <button>Go</button>
+                        </form>
+                        <span>Sign up if you want to be in the loop!</span>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="copyright">Famous Stars & Straps © @DateTime.Now.Year All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+        <script src="/js/main.js"></script>
+        @RenderSection("foot", required: false)
+        <script type="text/javascript">
+          var kitgui = { key: '@Web.Config.AppSettings.KitGUI.AccountKey', tabVisible: false };
+        </script>
+        <script type="text/javascript" src="//d34ic8my8k87as.cloudfront.net/js/kitgui.js"></script>
+    </body>
+</html>
