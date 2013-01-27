@@ -6,18 +6,21 @@
     *@<link rel="stylesheet" href="/css/famoussas/shop.css" />@*
     *@@RenderSection("head", required: false)@*
 *@}
-<div class="breadcrumb">
+<div class="shop breadcrumb">
     @RenderSection("breadcrumb", required: false)
 </div>
 <div style="clear:both"></div>
-<div class="left">
+<div class="shop left">
+    <a class="header" href="/"></a>
+    <div class="nav">
 
+    </div>
+    <div style="clear:both"></div>
 </div>
-<div class="right">
+<div class="shop right">
     @RenderBody()
 </div>
 <div style="clear:both"></div>
-
 @section foot
 {
     @RenderSection("foot", required: false)
