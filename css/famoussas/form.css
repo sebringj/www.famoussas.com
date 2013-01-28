@@ -12,6 +12,12 @@
         color:#777;
         font-size:2em;
     }
+.form-group input{
+    padding:3px;
+}
+.form input.small {
+    width:60px;
+}
     .form label {
         display:block;
     }
@@ -30,6 +36,12 @@
         text-align:right;
         width:206px;
     }
+        .form .button-group .error {
+            display:none;
+            color:#f00;
+            padding:3px;
+            font-size:1.2em;
+        }
     .form button {
         background-color:#c1182b;
         padding:5px 10px 5px 10px;

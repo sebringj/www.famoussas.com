@@ -1,4 +1,5 @@
-﻿$('.copyright').click(function () {
+﻿if (!window.console) { window.console = { log: function () { } }; }
+$('.copyright').click(function () {
     kitgui.showTab();
 });
 var app = {
